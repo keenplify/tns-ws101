@@ -1,0 +1,61 @@
+/* HOME CSS */
+.container {
+  padding: 0 0 120vh 0;
+}
+#banneruwu {
+  width: 90%;
+  height: 23rem;
+  position: absolute;
+  padding-left: 5%;
+  border-radius: 25px;
+}
+
+#aboutuscontainer {
+  width: 40%;
+  background-color: whitesmoke;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 25px;
+  margin-left: 5%;
+  margin-top: 25rem;
+  position: absolute;
+}
+
+#aboutus {
+  font-family: "Century Gothic";
+  color: rgb(61, 61, 61);
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 1px;
+  padding-right: 1px;
+  border-radius: 20px;
+  opacity: 25px;
+  font-weight: bold;
+}
+
+#mapscontainer {
+  width: 40%;
+  background-color: whitesmoke;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 25px;
+  position: absolute;
+  margin-left: 51%;
+  margin-top: 25rem;
+}
+
+#maps {
+  padding-top: 4px;
+  padding-left: 13%;
+}
+
+.bg-blur {
+  height: 140%;
+}
+
+/* END OF HOME CSS */

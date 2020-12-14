@@ -1,0 +1,91 @@
+/*********Product******/
+
+#containerheader2,
+#containerheader3,
+#containerheader4 {
+  overflow: hidden;
+}
+
+@media (min-width: 1160px) {
+  .container {
+    width: 1160px;
+  }
+}
+
+.container {
+  width: 83.333%;
+  margin: 0 auto;
+}
+
+#containerheader2 {
+  margin: 5% auto;
+  background-color: #ffd700;
+  padding: 5px 0;
+  border-radius: 25px;
+}
+
+#header2 {
+  font-family: "Century Gothic";
+  color: rgb(104, 98, 98);
+  font-size: 20px;
+  margin-left: 2%;
+  margin-right: 0%;
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+  opacity: 25px;
+  font-weight: bold;
+}
+
+#containerheader3 {
+  margin: 5% auto;
+  background-color: #fdedec;
+  padding: 5px 0;
+  border-radius: 25px;
+}
+
+#header3 {
+  font-family: "Century Gothic";
+  color: rgb(104, 98, 98);
+  font-size: 20px;
+  margin-left: 2%;
+  margin-right: 0%;
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+  opacity: 25px;
+  font-weight: bold;
+}
+
+#containerheader4 {
+  margin: 5% auto;
+  background-color: #ffd700;
+  padding: 5px 0;
+  border-radius: 25px;
+}
+
+#header4 {
+  font-family: "Century Gothic";
+  color: rgb(104, 98, 98);
+  font-size: 20px;
+  margin-left: 2%;
+  margin-right: 0%;
+  margin-top: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 20px;
+  opacity: 25px;
+  font-weight: bold;
+}
+
+.bg-blur {
+  height: 250%;
+}

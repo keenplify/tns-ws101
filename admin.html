@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Takoyaki & Shawarma</title>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="Tako.css">
+        <script rel="javascript" type="text/javascript" src="Shaw.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="./css/admin.css" rel="stylesheet">
+      <script>
+          let ContentContainer
+          const Components = [];
+          Components.Queue = './components/QueueComponent.html'
+          Components.Sales = './components/SalesComponent.html'
+          Components.History = './components/HistoryComponent.html'
+          
+          RouterLink = (component) => {
+              ContentContainer = document.querySelector('#content');
+  
+              ContentContainer.innerHTML = `<iframe src="${Components[component]}" class="ContentFrame"></iframe>`
+              ContentContainer.style.animation = null
+              setInterval(() => {
+                  ContentContainer.style.animation = '1s ease-out 0s 1 slideInFromRight'
+              }, 1); 
+          }
+      </script>
+    </head>
+<body class="bg-body">
+<!----CONTAIANER------>
+<div class="cotainer">
+
+<!-----BACKGROUND----->
+
+<div class="bg-blur"></div>
+
+<!-------HEADER------->
+  
+<div class="header">
+    <h2>Administrator</h2>
+</div>
+
+<!-----NAVIGATION----->
+  
+<div class="navigation">
+  <ul>
+    <img src="NavImgSrc/TakoShaw.png" class="img1" alt="logo"/> 
+     <img src="NavImgSrc/TakoLogo.png" class="img2" alt="name"/> 
+      <li><a href="index.html">Home</a></li>
+       <img src="NavImgSrc/home.png" class="homelogo navlogo"/>
+        <li><a href="Online Deivery.html">Online Delivery</a></li>
+        <img src="NavImgSrc/online delivery.png" class="dellogo navlogo"/>
+       <li><a href="Products.html">Products</a></li>
+      <img src="NavImgSrc/products.png" class="prodlogo navlogo"/>
+     <a href="https://web.facebook.com/Takoyaki.Shawarma" target="_blank">
+    <img src="NavImgSrc/fb.png" class="fblogo"/>
+  </a>
+</ul>
+</div>
+
+<!------CONTENT PAGE---->
+
+<div class='sidenav'>
+  <a href='#' onclick="RouterLink('Queue')">
+      <img src="./res/queue.svg">
+      Queue
+  </a>
+  <a href='#' onclick="RouterLink('Sales')">
+      <img src="./res/sales.svg">
+      Sales
+  </a>
+  <a href='#' onclick="RouterLink('History')">
+      <img src="./res/history.svg">
+      History
+  </a>
+</div>
+
+<div id='content'>
+    <script>
+        RouterLink('History')
+    </script>
+</div>
+
+</div>
+
+</body>
+</html>

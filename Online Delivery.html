@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Takoyaki & Shawarma</title>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="Tako.css">
+        <script rel="javascript" type="text/javascript" src="Shaw.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <link href="./css/onlinedelivery.css" rel="stylesheet" >
+        <script rel="javascript" type="text/javascript" src="AdminPopup.js" defer></script>
+    </head>
+<body class="bg-body">
+<!----ADMIN PANEL------>
+<div class="admin-login" id="admin-login" style='visibility: hidden;'>
+<h3>Administrator Login</h3>
+<form action="admin.html" method="post">
+    <input type="text" name="username" id="username" placeholder="Username">
+    <input type="password" name="password" id="password" placeholder="Password">
+    <button type="submit">Login</button>
+</form>
+</div>
+<!----CONTAIANER------>
+<div class="cotainer">
+<!-----BACKGROUND----->
+
+<div class="bg-blur"></div>
+
+<!-------HEADER------->
+
+<div class="header">
+    <h2>Online Delivery</h2>
+</div>
+
+<!-----NAVIGATION----->
+<!-----LINKS TO THE PAGES----->
+<div class="navigation">
+    <ul>
+      <img src="NavImgSrc/TakoShaw.png" class="img1" alt="logo" ondblclick="showAdminPopup()"/> 
+       <img src="NavImgSrc/TakoLogo.png" class="img2" alt="name"/> 
+        <li><a href="index.html">Home</a></li>
+         <img src="NavImgSrc/home.png" class="homelogo navlogo"/>
+          <li><a href="Online Delivery.html">Online Delivery</a></li>
+          <img src="NavImgSrc/online delivery.png" class="dellogo navlogo"/>
+         <li><a href="Products.html">Products</a></li>
+        <img src="NavImgSrc/products.png" class="prodlogo navlogo"/>
+       <a href="https://web.facebook.com/Takoyaki.Shawarma" target="_blank">
+      <img src="NavImgSrc/fb.png" class="fblogo"/>
+    </a>
+  </ul>
+  </div>
+
+<form>
+    <div class="orders">
+        <center>  
+		<h1> YOUR ORDERS <h1>
+    <table border='1' style="margin: 0 auto;">
+                <thead>
+                    <td>PRODUCT NAME:</td>
+                    <td>PRODUCT DESCRIPTION</td>
+                    <td> PRICE </td>
+                    <td> QUANTITY </td>
+                </thead>
+				
+				<tr class='cart-row'>
+                    <td> REGULAR </td>
+                    <td> Veggies & Cheese </td>
+                    <td span class="shop-price"> ₱50  </td>
+                    <td> 
+                        <input class="quantity-input" type="number" value="0" />
+                        <button class="delete-cart">X</button>	
+                    </td>
+                </tr>
+  
+				<tr class='cart-row'>
+                    <td> HAM </td>
+                    <td> Ham & Cheese </td>
+                    <td span class="shop-price"> ₱50  </td>
+                    <td> 
+                        <input class="quantity-input" type="number" value="0" />
+                        <button class="delete-cart">X</button>	
+                    </td>
+                </tr>
+
+				<tr class='cart-row'>
+                    <td> CRAB </td>
+                    <td> Crab, Veggies & Cheese </td>
+                    <td span class="shop-price"> ₱70  </td>
+                    <td> 
+                        <input class="quantity-input" type="number" value="0" />
+                        <button class="delete-cart">X</button>	
+                    </td>
+                </tr>
+
+				<tr class='cart-row'>
+                    <td> SPECIAL </td>
+                    <td> Octopus, Veggies & Cheese </td>
+                    <td span class="shop-price"> ₱80  </td>
+                    <td> 
+                        <input class="quantity-input" type="number" value="0" />
+                        <button class="delete-cart">X</button>	
+                    </td>
+                </tr>
+				<tr class='cart-row'>
+                    <td> BEEF SHAWARMA </td>
+                    <td>  </td>
+                    <td span class="shop-price"> ₱50  </td>
+                    <td> 
+                        <input class="quantity-input" type="number" value="0" />
+                        <button class="delete-cart">X</button>	
+                    </td>
+                </tr>
+				
+				<tr class='cart-row'>
+                    <td> CHICKEN </td>
+                    <td>  </td>
+                    <td span class="shop-price"> ₱50  </td>
+                    <td> 
+                        <input class="quantity-input" type="number" value="0" />
+                        <button class="delete-cart">X</button>	
+                    </td>
+                </tr>
+
+				<tr class='cart-total'>
+                    <td colspan='2'> TOTAL </td>
+                    <td class='cart-total-price' colspan='2' style='text-align:right'>0.00</td>
+                </tr>
+
+    </table>
+       <div class="clear-checkout">
+                 <div id="btnplaceorder"><a class="a1"href="checkout.html">CHECK OUT!</a></div>
+              </div>
+    </div>
+    </center>
+	</form>
+
+<script>
+let removeCartItemButtons = document.querySelectorAll('.delete-cart');
+      for (let i = 0; i < removeCartItemButtons.length; i++) {
+
+          let button = removeCartItemButtons[i]
+          button.addEventListener('click', removeCartItem)
+      }
+
+      let quantityInputs = document.querySelectorAll('.quantity-input');
+      for (let i = 0; i < quantityInputs.length; i++) {
+
+          let input = quantityInputs[i]
+          input.addEventListener('change', quantityChanged);
+      }
+
+      function removeCartItem(event) {
+          let buttonCliked = event.target;
+          buttonCliked.parentElement.parentElement.remove()
+          updateCartTotal()
+      }
+
+      function quantityChanged(event) {
+          let input = event.target;
+
+          if (isNaN(input.value) || input.value < 0) {
+              input.value = 0;
+          }
+          updateCartTotal()
+      }
+
+      function updateCartTotal() {
+          let cartRows = document.querySelectorAll('.cart-row');
+          let total = 0
+          for (let i = 0; i < cartRows.length; i++) {
+              let cartRow = cartRows[i]
+              let priceElement = cartRow.querySelector('.shop-price');
+              let quantityElement = cartRow.querySelector('.quantity-input');
+              let price = parseFloat(priceElement.innerText.replace('₱', ''))
+              let quantity = quantityElement.value
+              total = total + (price * quantity)
+          }
+          document.querySelector('.cart-total-price').innerText = `₱${total}`;
+      }
+     
+
+</script>
+</body>
+</html>
+
+
+

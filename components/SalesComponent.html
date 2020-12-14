@@ -1,0 +1,72 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+<style>
+    body{
+        font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .chartcontainer {
+        width: calc(50% - 64px);
+        display: inline-block;
+        background-color: rgba(255,255,0.7);
+        padding: 24px;
+        border-radius: 24px;
+    }
+
+    h1 {color: white;}
+
+    @media (max-width: 768px) {
+        .chartcontainer {
+            width: 90%;
+            margin: 8px 0;
+        }
+
+        body{
+            height: 180vh;
+        }
+    }
+</style>
+
+<div>
+    <h1>Sales</h1>
+    <div class="chartcontainer">
+        <h3>Daily Sales</h3>
+        <canvas id="dailyChart"></canvas>
+
+        <script>
+            var ctx = document.getElementById('dailyChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+                    datasets: [{
+                        label: 'Sales',
+                        data: [100, 200, 300, 310,500,600,250,150,600,1000,1100,600],
+                        borderColor: 'rgb(255, 92, 92)',
+                        backgroundColor: '#FFBF00'
+                    }]
+                }
+            })
+        </script>
+    </div>
+
+    <div class="chartcontainer">
+        <h3>Monthly Sales</h3>
+        <canvas id="monthlyChart"></canvas>
+
+        <script>
+            var ctx = document.getElementById('monthlyChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                    datasets: [{
+                        label: 'Sales',
+                        data: [100, 200, 300, 400,500,600,700,800,900,1000,1100,1200],
+                        borderColor: 'rgb(255, 92, 92)',
+                        backgroundColor: '#FFBF00'
+                    }]
+                }
+            })
+        </script>
+    </div>
+</div>

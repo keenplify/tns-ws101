@@ -1,0 +1,157 @@
+<style>
+    body{
+        font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    }
+    .historyList {
+        position: relative;
+        overflow:auto;
+        height: 50%;
+    }
+    .historyList::-webkit-scrollbar-thumb {
+        background:  rgb(255, 92, 92);
+    }
+    .historyList::-webkit-scrollbar {
+        width: 4px;
+    } 
+    .historyItem:first-child {
+        border-radius: 0 8px 0 0;
+    }
+    .historyItem:first-child::before {
+        border-radius: 8px 0 0 0;
+    }   
+    .historyItem:last-child {
+        border-radius: 0 0 8px 0;
+    }
+    .historyItem:last-child::before {
+        border-radius: 0 0 0 8px;
+    }   
+    .historyItem:nth-child(even)::before {
+        background-color: rgb(255, 92, 92);
+    }
+    .historyItem:nth-child(even) {
+        background-color:rgb(255, 235, 235);
+    }
+    .historyItem {
+        background-color: rgb(255, 255, 235);
+        height: 5rem;
+        margin-left: 3rem;
+        line-height: 1.25rem;
+        position: relative;
+        padding: 4px 0 4px 1rem;
+    }
+    .historyItem::before {
+        content: '';
+        background-color: yellow;
+        width: 3rem;
+        height: calc(5rem + 8px);
+        position: absolute;
+        left: -3rem;
+        top: 0;
+        z-index: -1;
+    }
+    .historyTransactee::before {
+        content: 'Transactee: ';
+        font-weight: bold;
+    }
+    .historyInfo::before {
+        content: 'Info: ';
+        font-weight: bold;
+    }
+    .historyGross::before {
+        content: 'Gross Income: ';
+        font-weight: bold;
+    }
+    .historyDate::before {
+        content: 'Date: ';
+        font-weight: bold;
+    }
+    .historyIndex {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        color: rgba(0,0,0,.5)
+    }
+
+    @media (min-width: 992px) {
+        .historyContainer {
+          width: 80%
+        }
+    }
+</style>
+
+<div class="historyContainer">
+    <h3 style='color: yellow'>Transactions History</h3>
+    <div class="historyList">
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0001</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0002</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0003</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0004</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0005</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0006</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0007</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0008</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0009</div>
+        </div>
+        <div class="historyItem" data-transactionType="OnlineDelivery">
+            <div class="historyTransactee">Aczell Florencio</div>
+            <div class="historyInfo">Lorem ipsum dolor amet</div>
+            <div class="historyGross" data-grosstype="addition">₱365.00</div>
+            <div class="historyDate">February 2, 2020</div>
+            <div class="historyIndex">#0010</div>
+        </div>
+    </div>
+</div>
+

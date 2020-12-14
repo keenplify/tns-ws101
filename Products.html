@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Takoyaki & Shawarma</title>
+        <title>Page Title</title>
+        <link rel="stylesheet" type="text/css" href="Tako.css">
+        <link rel="stylesheet" type="text/css" href="./css/product.css">
+        <script rel="javascript" type="text/javascript" src="AdminPopup.js" defer></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+        <script rel="javascript" type="text/javascript" src="AdminPopup.js" defer></script>
+        <script>
+            window.addEventListener("resize", function(event) {
+    console.log(document.body.clientWidth + ' wide by ' + document.body.clientHeight+' high');
+})
+        </script>
+    </head>
+<body class="bg-body">
+
+<!----ADMIN PANEL------>
+<div class="admin-login" id="admin-login" style='visibility: hidden;'>
+  <h3>Administrator Login</h3>
+  <form action="admin.html" method="post">
+    <input type="text" name="username" id="username" placeholder="Username">
+    <input type="password" name="password" id="password" placeholder="Password">
+    <button type="submit">Login</button>
+  </form>
+</div>
+
+<!----CONTAIANER------>
+<div class="main">
+
+<!-----BACKGROUND----->
+
+<div class="bg-blur"></div>
+
+<!-------HEADER------->
+  
+<div class="header">
+    <h2>Home</h2>
+</div>
+
+<!-----NAVIGATION----->
+  
+<div class="navigation">
+  <ul>
+    <img src="NavImgSrc/TakoShaw.png" class="img1" alt="logo" ondblclick="showAdminPopup()"/> 
+     <img src="NavImgSrc/TakoLogo.png" class="img2" alt="name"/> 
+      <li><a href="index.html">Home</a></li>
+       <img src="NavImgSrc/home.png" class="homelogo navlogo"/>
+        <li><a href="Online Delivery.html">Online Delivery</a></li>
+        <img src="NavImgSrc/online delivery.png" class="dellogo navlogo"/>
+       <li><a href="Products.html">Products</a></li>
+      <img src="NavImgSrc/products.png" class="prodlogo navlogo"/>
+     <a href="https://web.facebook.com/Takoyaki.Shawarma" target="_blank">
+    <img src="NavImgSrc/fb.png" class="fblogo"/>
+  </a>
+</ul>
+</div>
+
+<!------CONTENT PAGE---->
+<div class="container">
+  <div id="containerheader2">
+            <div id="header2">
+            	<img src="img/pic.jpg" alt="pic" style="width:40%; height:250%; margin-right: 50%; margin-top:0%">
+				<h2 style="text-align: left; margin-left: 42%;  margin-top:-32%">Menu Favorite</h2>
+                <p style="text-align: left; margin-left: 45%; margin-top:0%;">REGULAR TAKOYAKI <br> Veggies & Cheese <br> P50 - 6pcs </p>
+                <button style="text-align: left; margin-left: 45%;">Add-Cart</button>
+                <p style="text-align: left; margin-left: 45%; margin-top:5%;">HAM & CHEESE <br>Ham & Cheese <br> P60 - 6pcs </p>
+                <button style="text-align: left; margin-left: 45%;">Add-Cart</button>
+	
+				<p style="text-align: left; margin-left: 67%; margin-top:-26%;">SPECIAL TAKOYAKI <br>Octopus Bits, Veggies & Cheese <br> P80 - 6pcs </p>
+                <button style="text-align: left; margin-left: 67%;">Add-Cart</button>
+				
+				<p style="text-align: left; margin-left: 67%; margin-top:5%;">CRAB TAKOYAKI  <br>Crab, Veggies & Cheese <br> P70 - 6pcs </p>
+                <button style="text-align: left; margin-left: 67%;">Add-Cart</button>
+            </div>
+		</div>
+		
+    <div id="containerheader3">
+            <div id="header3">
+            <img src="img/pic2.jpg" alt="pic" style="width:40%; height:250%; margin-left: 58%; margin-top:0%;">
+            <h2 style="text-align: left; margin-left: 2%;  margin-top:-32%">Menu Favorite</h2>
+            <h2 style="text-align: left; margin-left: 10%;  margin-top: -1%">SHAWARMA</h2>
+            <p style="text-align: left; margin-left: 15%; margin-top:-1%;">BEEF SHAWARMA <br> Large Fita - P 50 <br> With Cheese - 60 </p>
+            <button style="text-align: left; margin-left: 15%;">Add-Cart</button>
+            
+            <p style="text-align: left; margin-left: 15%; margin-top:2%;">CHICKEN SHAWARMA <br> Large Fita - P 50 <br> With Cheese - 60 </p>
+            <button style="text-align: left; margin-left: 15%;">Add-Cart</button>
+            </div>		
+    </div>
+		
+    <div id="containerheader4">
+            <div id="header4">
+            <img src="img/pic3.jpg" alt="pic" style="width:40%; height:250%; margin-right: 50%; margin-top:0%;">
+            <h2 style="text-align: left; margin-left: 42%;  margin-top:-32%">Menu Favorite</h2>
+            <h2 style="text-align: left; margin-left: 43%;  margin-top: -1%">TAKOYAKI PARTY TRAY (30 PCS)</h2>
+            <p style="text-align: left; margin-left: 43%; margin-top:-1%;">REGULAR TAKOYAKI TRAY<br> Veggies & Cheese <br> P300 </p>
+            <button style="text-align: left; margin-left: 43%;">Add-Cart</button>
+            
+            <p style="text-align: left; margin-left: 43%; margin-top:2%;"> CRAB TAKOYAKI TRAY <br> Crab ,Veggies & Cheese <br> P400 </p>
+            <button style="text-align: left; margin-left: 43%;">Add-Cart</button>
+            
+            <p style="text-align: left; margin-left: 69%; margin-top:-23.5%;"> HAM & CHEESE TAKOYAKI TRAY <br> Cheese & Cheese <br> P350 </p>
+            <button style="text-align: left; margin-left: 69%;">Add-Cart</button>
+            
+            <p style="text-align: left; margin-left: 69%; margin-top:2%;"> SPECIAL TAKOYAKI TRAY <br> Octopus Bits,Veggies & Cheese <br> P450 </p>
+            <button style="text-align: left; margin-left: 69%;">Add-Cart</button>
+            
+            <p style="text-align: left; margin-left: 48%; margin-top:3%;"> MIXED TAKOYAKI TRAY <br> Regular, Special, Ham & Cheese, and Crab <br> P400 </p>
+            <button style="text-align: left; margin-left: 48%;">Add-Cart</button>
+            </div>		
+        </div>		
+</div>
+
+
+
+</body>
+</html>
